@@ -1,5 +1,5 @@
 __pycache__/
-*.pyc
+*.py[cod]
 .pytest_cache/
 .ruff_cache/
 .venv/
@@ -9,3 +9,4 @@ __pycache__/
 kubeconfig*
 talosconfig*
 clouds.yaml
+notes/

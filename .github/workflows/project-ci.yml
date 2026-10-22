@@ -49,9 +49,6 @@ jobs:
   test:
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    # defaults:
-    #   run:
-    #     working-directory: silo
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-python@v6
@@ -105,9 +102,6 @@ jobs:
     concurrency:
       group: deploy-${{ needs.plan.outputs.target }}
       cancel-in-progress: false
-    # defaults:
-    #   run:
-    #     working-directory: silo
     env:
       TARGET: ${{ needs.plan.outputs.target }}
       IMAGE: ${{ needs.plan.outputs.image }}:${{ github.sha }}
