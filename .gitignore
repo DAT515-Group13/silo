@@ -9,3 +9,4 @@ __pycache__/
 kubeconfig*
 talosconfig*
 clouds.yaml
+notes/
