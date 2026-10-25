@@ -1,0 +1,20 @@
+
+name: Self-hosted runner test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-runner:
+    runs-on: [self-hosted, Linux, X64, silo-vm]
+    steps:
+      - name: Verify runner machine
+        run: |
+          echo "Runner hostname:"
+          hostname
+          echo "Operating system:"
+          lsb_release -a
+          echo "Available resources:"
+          nproc
+          free -h
+          df -h /
